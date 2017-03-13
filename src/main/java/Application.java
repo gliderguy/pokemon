@@ -1,5 +1,7 @@
+import enums.AttackTypes;
+import enums.EvolutionStatus;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Application {
@@ -7,24 +9,14 @@ public class Application {
         List<Pokecard>  pokecards =  new ArrayList<>();
         List<Attack>  attackList = new ArrayList<>();
 
-        attackList.add(new Attack("Tackle", 50));
-        attackList.add(new Attack("Lava Ball", 80));
-        pokecards.add( new Pokecard("Moltan", 50, 0.7, attackList, "Lava", "Basic"));
+        attackList.add(new Attack(AttackTypes.TACKLE));
+        attackList.add(new Attack(AttackTypes.LAVA_BALL));
+        pokecards.add( new Pokecard("Moltan", 50, 0.7, attackList, Type.LAVA, EvolutionStatus.BASIC));
 
         attackList = new ArrayList<>();
-        attackList.add(new Attack("Dream Eater", 80));
-        attackList.add(new Attack("Dream Blast", 100));
-        pokecards.add( new Pokecard("Dream Morning", 150, 2.0, attackList, "Dream Type", "Basic"));
-
-        attackList = new ArrayList<>();
-        attackList.add(new Attack("Dream Eater", 80));
-        attackList.add(new Attack("Dream Blast", 100));
-        pokecards.add( new Pokecard("Dream Morning", 150, 2.0, attackList, "Dream Type", "Basic"));
-
-        attackList = new ArrayList<>();
-        attackList.add(new Attack("Dream Eater", 80));
-        attackList.add(new Attack("Dream Blast", 100));
-        pokecards.add( new Pokecard("Dream Morning", 150, 2.0, attackList, "Dream Type", "Basic"));
+        attackList.add(new Attack(AttackTypes.DREAM_EATER));
+        attackList.add(new Attack(AttackTypes.DREAM_BLAST));
+        pokecards.add( new Pokecard("Dream Morning", 150, 2.0, attackList, Type.DREAM, EvolutionStatus.BASIC));
 
         for(Pokecard pokecard: pokecards){
             System.out.println("Pokemon Name: " + pokecard.getName());

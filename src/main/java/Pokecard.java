@@ -1,3 +1,5 @@
+import enums.EvolutionStatus;
+
 import java.util.List;
 
 /**
@@ -5,7 +7,7 @@ import java.util.List;
  */
 public class Pokecard {
 
-    public Pokecard(String name, Integer hitPoints, Double hieght, List<Attack> attacks, String type, String evolutionStatus) {
+    public Pokecard(String name, Integer hitPoints, Double hieght, List<Attack> attacks, Type type, EvolutionStatus evolutionStatus) {
 
         this.name = name;
         this.hitPoints = hitPoints;
@@ -47,19 +49,19 @@ public class Pokecard {
         this.attacks = attacks;
     }
 
-    public String getType() {
+    public Type getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(Type type) {
         this.type = type;
     }
 
-    public String getEvolutionStatus() {
+    public EvolutionStatus getEvolutionStatus() {
         return evolutionStatus;
     }
 
-    public void setEvolutionStatus(String evolutionStatus) {
+    public void setEvolutionStatus(EvolutionStatus evolutionStatus) {
         this.evolutionStatus = evolutionStatus;
     }
 
@@ -67,7 +69,7 @@ public class Pokecard {
     Integer hitPoints;
     Double hieght;
     List<Attack> attacks;
-    String type;
-    String evolutionStatus;
+    Type type;
+    EvolutionStatus evolutionStatus;
 
 }
