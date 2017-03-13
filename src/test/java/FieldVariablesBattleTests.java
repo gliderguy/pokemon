@@ -1,4 +1,3 @@
-import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -9,11 +8,11 @@ import static org.hamcrest.core.IsEqual.equalTo;
 
 public class FieldVariablesBattleTests implements InstanceTestClassListener {
 
-    Battle battle;
+    static Battle battle;
 
-    @Before
+    @Override
     public void beforeClassSetup() {
-     battle = new Battle(createCard1(), createCard2());
+        battle = new Battle(createCard1(), createCard2());
     }
 
     @Override
@@ -24,7 +23,6 @@ public class FieldVariablesBattleTests implements InstanceTestClassListener {
     @Test
     public void createBattle(){
         battle = new Battle(createCard1(), createCard2());
-
         assertThat( battle.getFighterA().getName(), equalTo("Dream Morning"));
     }
 

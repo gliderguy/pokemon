@@ -6,31 +6,31 @@ import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
+import static org.hamcrest.core.IsNull.notNullValue;
 
-public class BattleTests implements InstanceTestClassListener {
+public class BattleTests {
 
     Battle battle;
+//    static boolean setupRun;
 
     @Before
-    public void beforeClassSetup() {
-     battle = new Battle(createCard1(), createCard2());
-    }
-
-    @Override
-    public void afterClassSetup() {
-
+    public void setup() {
+//        if (!setupRun) {
+//            System.out.println("****Before Setup Run");
+            battle = new Battle(createCard1(), createCard2());
+//            setupRun = true;
+//        }
     }
 
     @Test
     public void createBattle(){
-        battle = new Battle(createCard1(), createCard2());
-
-        assertThat( battle.getFighterA().getName(), equalTo("Dream Morning"));
+        assertThat( battle, notNullValue() );
     }
 
     @Test
-    public void getFighterSatus(){
-
+    public void getCardNamesOfFighterAAndFirghterB(){
+        assertThat( battle.getFighterA().getName(), equalTo("Dream Morning"));
+        assertThat( battle.getFighterB().getName(), equalTo("Moltan"));
     }
 
     @Test
