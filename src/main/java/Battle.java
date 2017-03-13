@@ -43,4 +43,8 @@ public class Battle {
 
     }
 
+    public AttackResult attack(Attack fighterAAtack, Integer fighterBHitPoints) {
+        return new AttackResult(null, fighterBHitPoints - fighterAAtack.getDamage());
+
+    }
 }

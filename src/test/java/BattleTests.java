@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.hamcrest.core.IsNull.notNullValue;
 
@@ -34,8 +35,10 @@ public class BattleTests {
     }
 
     @Test
-    public void getFighters(){
-
+    public void fighterAAttacksFighterB(){
+        AttackResult attackResult;
+        attackResult = battle.attack(battle.getFighterA().attacks.get(0), battle.getFighterB().getHitPoints());
+        assertThat(attackResult.fighterBHitPoints, is(-30));
     }
 
     private Pokecard createCard1(){
