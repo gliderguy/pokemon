@@ -20,9 +20,6 @@ public class CreatePokemonTest {
         attackList.add(new Attack("Lava Ball", 80));
         pokecards.add( new Pokecard("Moltan", 50, 0.7, attackList, "Lava", "Basic"));
 
-        boolean a;
-        boolean b;
-
         assertThat( pokecards.get(0).getName(), equalTo("Moltan"));
         assertThat( pokecards.get(0).getHitPoints(), equalTo(50));
         assertThat( pokecards.get(0).getHieght(), equalTo(0.7));
@@ -32,5 +29,4 @@ public class CreatePokemonTest {
         assertThat( pokecards.get(0).getAttacks().get(1).getDamage(), equalTo(80));
         assertThat( pokecards.get(0).getAttacks().size(), equalTo(2));
     }
-
 }
