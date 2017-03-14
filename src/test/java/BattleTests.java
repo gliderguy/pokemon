@@ -1,11 +1,6 @@
-import enums.AttackTypes;
-import enums.EvolutionStatus;
-import enums.Type;
+import enums.Pokecards;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -34,7 +29,7 @@ public class BattleTests {
     @Test
     public void getCardNamesOfFighterAAndFirghterB(){
         assertThat( battle.getFighterA().getName(), equalTo("Dream Morning"));
-        assertThat( battle.getFighterB().getName(), equalTo("Moltan"));
+        assertThat( battle.getFighterB().getName(), equalTo("Molten"));
     }
 
     @Test
@@ -45,20 +40,11 @@ public class BattleTests {
     }
 
     private Pokecard createCard1(){
-        List<Attack>  attackList = new ArrayList<>();
-
-        attackList.add(new Attack(AttackTypes.DREAM_EATER));
-        attackList.add(new Attack(AttackTypes.DREAM_BLAST));
-        return new Pokecard("Dream Morning", 150, 2.0, attackList, Type.DREAM, EvolutionStatus.BASIC);
-
+        return new Pokecard(Pokecards.DREAM_MORNING);
     }
 
-    private Pokecard createCard2(){
-        List<Attack>  attackList = new ArrayList<>();
-
-        attackList.add(new Attack(AttackTypes.TACKLE));
-        attackList.add(new Attack(AttackTypes.LAVA_BALL));
-        return new Pokecard("Moltan", 50, 0.7, attackList, Type.LAVA, EvolutionStatus.BASIC);
+    private Pokecard createCard2() {
+        return new Pokecard(Pokecards.MOLTEN);
     }
 }
 

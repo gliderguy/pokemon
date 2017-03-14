@@ -1,29 +1,36 @@
+import enums.AttackTypes;
 import enums.EvolutionStatus;
 import enums.Pokecards;
 import enums.Type;
 
-import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Created by Darren on 12/03/2017.
  */
 public class Pokecard {
 
-    public Pokecard(String name, Integer hitPoints, Double hieght, List<Attack> attacks, Type type, EvolutionStatus evolutionStatus) {
+    String name;
+    Integer hitPoints;
+    Double height;
+    ArrayList<AttackTypes> attacks;
+    Type type;
+    EvolutionStatus evolutionStatus;
+
+    public Pokecard(String name, Integer hitPoints, Double hieght, AttackTypes attacks, Type type, EvolutionStatus evolutionStatus) {
 
         this.name = name;
         this.hitPoints = hitPoints;
         this.height = hieght;
-        this.attacks = attacks;
         this.type = type;
         this.evolutionStatus = evolutionStatus;
     }
 
-    public Pokecard(Pokecards card, List<Attack> attacks) {
+    public Pokecard(Pokecards card) {
         this.name = card.getName();
         this.hitPoints = card.getHitpoints();
+        this.attacks = card.getAttackTypes();
         this.height = card.getHeight();
-        this.attacks = attacks;
         this.type = card.getType();
         this.evolutionStatus = card.getEvolutionStatus();
     }
@@ -52,11 +59,11 @@ public class Pokecard {
         this.height = height;
     }
 
-    public List<Attack> getAttacks() {
+    public ArrayList<AttackTypes> getAttacks() {
         return attacks;
     }
 
-    public void setAttacks(List<Attack> attacks) {
+    public void setAttacks(ArrayList<AttackTypes> attacks) {
         this.attacks = attacks;
     }
 
@@ -76,11 +83,5 @@ public class Pokecard {
         this.evolutionStatus = evolutionStatus;
     }
 
-    String name;
-    Integer hitPoints;
-    Double height;
-    List<Attack> attacks;
-    Type type;
-    EvolutionStatus evolutionStatus;
 
 }

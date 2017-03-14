@@ -1,3 +1,5 @@
+import enums.AttackTypes;
+
 /**
  * Created by Darren on 13/03/2017.
  */
@@ -43,7 +45,7 @@ public class Battle {
 
     }
 
-    public AttackResult attack(Attack fighterAAtack, Integer fighterBHitPoints) {
+    public AttackResult attack(AttackTypes fighterAAtack, Integer fighterBHitPoints) {
         return new AttackResult(null, fighterBHitPoints - fighterAAtack.getDamage());
 
     }

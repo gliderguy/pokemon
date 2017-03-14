@@ -1,4 +1,3 @@
-import enums.AttackTypes;
 import enums.EvolutionStatus;
 import enums.Type;
 import org.junit.Test;
@@ -16,11 +15,8 @@ public class CreatePokemonTest {
     @Test
     public void createPokemon(){
         List<Pokecard> pokecards =  new ArrayList<Pokecard>();
-        List<Attack>  attackList = new ArrayList<Attack>();
 
-        attackList.add(new Attack(AttackTypes.TACKLE));
-        attackList.add(new Attack(AttackTypes.LAVA_BALL));
-        pokecards.add( new Pokecard(MOLTEN,attackList));
+        pokecards.add( new Pokecard(MOLTEN));
 
         assertThat( pokecards.get(0).getName(), equalTo("Molten"));
         assertThat( pokecards.get(0).getHitPoints(), equalTo(50));
