@@ -13,19 +13,17 @@ public class Pokecard {
 
         this.name = name;
         this.hitPoints = hitPoints;
-        this.hieght = hieght;
+        this.height = hieght;
         this.attacks = attacks;
         this.type = type;
         this.evolutionStatus = evolutionStatus;
     }
 
-    public Pokecard(Pokecards card) {
+    public Pokecard(Pokecards card, List<Attack> attacks) {
         this.name = card.getName();
         this.hitPoints = card.getHitpoints();
-        this.hieght = card.getHeight();
-//        for (Attack attack : this.attacks = card.getAttackTypes()) {
-//
-//        }
+        this.height = card.getHeight();
+        this.attacks = attacks;
         this.type = card.getType();
         this.evolutionStatus = card.getEvolutionStatus();
     }
@@ -46,12 +44,12 @@ public class Pokecard {
         this.hitPoints = hitPoints;
     }
 
-    public Double getHieght() {
-        return hieght;
+    public Double getHeight() {
+        return height;
     }
 
-    public void setHieght(Double hieght) {
-        this.hieght = hieght;
+    public void setHeight(Double height) {
+        this.height = height;
     }
 
     public List<Attack> getAttacks() {
@@ -80,7 +78,7 @@ public class Pokecard {
 
     String name;
     Integer hitPoints;
-    Double hieght;
+    Double height;
     List<Attack> attacks;
     Type type;
     EvolutionStatus evolutionStatus;
