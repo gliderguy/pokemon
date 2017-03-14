@@ -1,3 +1,5 @@
+package enums;
+
 /**
  * Created by Darren on 13/03/2017.
  */

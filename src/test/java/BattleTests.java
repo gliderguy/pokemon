@@ -1,5 +1,6 @@
 import enums.AttackTypes;
 import enums.EvolutionStatus;
+import enums.Type;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,5 +1,6 @@
 import enums.AttackTypes;
 import enums.EvolutionStatus;
+import enums.Type;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,7 @@ public class Application {
             for ( Attack attack :pokecard.getAttacks()) {
                 System.out.println(" Attack List " + attack.getName() + " " + attack.getDamage());
             }
-            System.out.println(" Type: " + pokecard.getType());
+            System.out.println(" enums.Type: " + pokecard.getType());
             System.out.println(" Evolution Status: " + pokecard.getEvolutionStatus());
         }
     }

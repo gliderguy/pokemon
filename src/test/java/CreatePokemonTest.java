@@ -1,16 +1,16 @@
 import enums.AttackTypes;
 import enums.EvolutionStatus;
+import enums.Type;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static enums.Pokecards.MOLTEN;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-/**
- * Created by Darren on 13/03/2017.
- */
+
 public class CreatePokemonTest {
 
     @Test
@@ -20,7 +20,7 @@ public class CreatePokemonTest {
 
         attackList.add(new Attack(AttackTypes.TACKLE));
         attackList.add(new Attack(AttackTypes.LAVA_BALL));
-        pokecards.add( new Pokecard("Moltan", 50, 0.7, attackList, Type.LAVA, EvolutionStatus.BASIC));
+        pokecards.add( new Pokecard(MOLTEN));
 
         assertThat( pokecards.get(0).getName(), equalTo("Moltan"));
         assertThat( pokecards.get(0).getHitPoints(), equalTo(50));
