@@ -30,8 +30,8 @@ public class PokeCardDeck {
             for ( AttackType attack :pokecard.getAttacks()) {
                 System.out.println(" Attack List " + attack.getName() + " " + attack.getDamage());
             }
-            System.out.println(" BeforeClassWithoutStaticTest.PokeType: " + pokecard.getPokeType());
-            System.out.println(" Evolution Status: " + pokecard.getEvolutionStatus());
+            System.out.println(" Poke Type: " + pokecard.getPokeType().getType());
+            System.out.println(" Evolution Status: " + pokecard.getEvolutionStatus().getType());
         }
     }
 
