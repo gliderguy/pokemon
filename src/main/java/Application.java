@@ -1,7 +1,6 @@
-import enums.AttackType;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.PrimitiveIterator;
 
 import static enums.PokemonDefinition.DREAM_MORNING;
 import static enums.PokemonDefinition.MOLTEN;
@@ -12,18 +11,8 @@ public class Application {
         pokecards.add( new Pokecard(MOLTEN));
         pokecards.add( new Pokecard(DREAM_MORNING));
 
-        for(Pokecard pokecard: pokecards){
-            System.out.println("Pokemon Name: " + pokecard.getName());
-            System.out.println(" Hit Points: " + pokecard.getHitPoints());
-            System.out.println(" Height: " + pokecard.getHeight());
-            for ( AttackType attack :pokecard.getAttacks()) {
-                System.out.println(" Attack List " + attack.getName() + " " + attack.getDamage());
-            }
-            System.out.println(" BeforeClassWithoutStaticTest.PokeType: " + pokecard.getPokeType());
-            System.out.println(" Evolution Status: " + pokecard.getEvolutionStatus());
-        }
-
-
+        PokecardDeckFactory pdf = new PokecardDeckFactory();
+        PokeCardDeck deck = pdf.createCards(PrimitiveIterator.class);
+        deck.displayCards();
     }
-
 }
