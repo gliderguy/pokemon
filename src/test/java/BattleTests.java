@@ -29,7 +29,7 @@ public class BattleTests {
     @Test
     public void getCardNamesOfFighterAAndFirghterB(){
         assertThat( battle.getFighterA().getName(), equalTo("Dream Morning"));
-        assertThat( battle.getFighterB().getName(), equalTo("Molten"));
+        assertThat( battle.getFighterB().getName(), equalTo("Moltan"));
     }
 
     @Test
@@ -44,7 +44,7 @@ public class BattleTests {
     }
 
     private Pokecard createCard2() {
-        return new Pokecard(PokemonDefinition.MOLTEN);
+        return new Pokecard(PokemonDefinition.MOLTAN);
     }
 }
 

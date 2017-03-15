@@ -18,7 +18,7 @@ public class createCardDeck {
     public void createPokeDeck( ){
         PokecardDeckFactory pdf = new PokecardDeckFactory();
         PokeCardDeck deck = pdf.createCards(PrimitiveIterator.class);
-        assertThat(deck.getCardCount(), is(2));
+        assertThat(deck.getCardCount(), is(4));
     }
 
     @Test

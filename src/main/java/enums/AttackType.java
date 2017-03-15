@@ -7,7 +7,11 @@ public enum AttackType {
     DREAM_EATER("Dream Eater", 80),
     DREAM_BLAST("Dream Blast", 100),
     TACKLE("Tackle", 50),
-    LAVA_BALL("Lava Ball", 80);
+    LAVA_BALL("Lava Ball", 80),
+    SCRATCH("Scratch", 10),
+    CUT("Cut", 20),
+    BODY_SLAM("Body Slam", 80),
+    GEM_VISION("Gem Vision", 50);
 
     private final String name;
     private final Integer damage;

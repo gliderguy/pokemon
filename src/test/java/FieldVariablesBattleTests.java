@@ -52,7 +52,7 @@ public class FieldVariablesBattleTests implements InstanceTestClassListener {
 
         attackList.add(new Attack(AttackType.TACKLE));
         attackList.add(new Attack(AttackType.LAVA_BALL));
-        return new Pokecard(PokemonDefinition.MOLTEN);
+        return new Pokecard(PokemonDefinition.MOLTAN);
     }
 }
 
