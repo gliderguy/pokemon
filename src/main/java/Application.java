@@ -1,10 +1,10 @@
-import enums.AttackTypes;
+import enums.AttackType;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static enums.Pokecards.DREAM_MORNING;
-import static enums.Pokecards.MOLTEN;
+import static enums.PokemonDefinition.DREAM_MORNING;
+import static enums.PokemonDefinition.MOLTEN;
 
 public class Application {
     public static void main(String[] args){
@@ -16,10 +16,10 @@ public class Application {
             System.out.println("Pokemon Name: " + pokecard.getName());
             System.out.println(" Hit Points: " + pokecard.getHitPoints());
             System.out.println(" Height: " + pokecard.getHeight());
-            for ( AttackTypes attack :pokecard.getAttacks()) {
+            for ( AttackType attack :pokecard.getAttacks()) {
                 System.out.println(" Attack List " + attack.getName() + " " + attack.getDamage());
             }
-            System.out.println(" enums.Type: " + pokecard.getType());
+            System.out.println(" BeforeClassWithoutStaticTest.PokeType: " + pokecard.getPokeType());
             System.out.println(" Evolution Status: " + pokecard.getEvolutionStatus());
         }
 

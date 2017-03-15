@@ -1,12 +1,12 @@
-import enums.AttackTypes;
+import enums.AttackType;
 
 public class Attack {
     String name;
     Integer damage;
 
-    public Attack(AttackTypes attackTypes) {
-        this.name = attackTypes.getName();
-        this.damage = attackTypes.getDamage();
+    public Attack(AttackType attackType) {
+        this.name = attackType.getName();
+        this.damage = attackType.getDamage();
     }
 
     public String getName() {

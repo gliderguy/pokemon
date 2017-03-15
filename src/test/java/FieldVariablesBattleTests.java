@@ -1,5 +1,5 @@
-import enums.AttackTypes;
-import enums.Pokecards;
+import enums.AttackType;
+import enums.PokemonDefinition;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -41,18 +41,18 @@ public class FieldVariablesBattleTests implements InstanceTestClassListener {
     private Pokecard createCard1(){
         List<Attack>  attackList = new ArrayList<>();
 
-        attackList.add(new Attack(AttackTypes.DREAM_EATER));
-        attackList.add(new Attack(AttackTypes.DREAM_BLAST));
-        return new Pokecard(Pokecards.DREAM_MORNING);
+        attackList.add(new Attack(AttackType.DREAM_EATER));
+        attackList.add(new Attack(AttackType.DREAM_BLAST));
+        return new Pokecard(PokemonDefinition.DREAM_MORNING);
 
     }
 
     private Pokecard createCard2(){
         List<Attack>  attackList = new ArrayList<>();
 
-        attackList.add(new Attack(AttackTypes.TACKLE));
-        attackList.add(new Attack(AttackTypes.LAVA_BALL));
-        return new Pokecard(Pokecards.MOLTEN);
+        attackList.add(new Attack(AttackType.TACKLE));
+        attackList.add(new Attack(AttackType.LAVA_BALL));
+        return new Pokecard(PokemonDefinition.MOLTEN);
     }
 }
 

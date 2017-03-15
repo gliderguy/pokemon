@@ -3,7 +3,7 @@ package enums;
 /**
  * Created by Darren on 13/03/2017.
  */
-public enum AttackTypes {
+public enum AttackType {
     DREAM_EATER("Dream Eater", 80),
     DREAM_BLAST("Dream Blast", 100),
     TACKLE("Tackle", 50),
@@ -13,7 +13,7 @@ public enum AttackTypes {
     private final Integer damage;
 
 
-    AttackTypes(String name, Integer damage) {
+    AttackType(String name, Integer damage) {
         this.name = name;
         this.damage = damage;
     }

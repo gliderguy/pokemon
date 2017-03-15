@@ -1,7 +1,7 @@
-import enums.AttackTypes;
+import enums.AttackType;
 import enums.EvolutionStatus;
-import enums.Pokecards;
-import enums.Type;
+import enums.PokeType;
+import enums.PokemonDefinition;
 
 import java.util.ArrayList;
 
@@ -13,26 +13,26 @@ public class Pokecard {
     String name;
     Integer hitPoints;
     Double height;
-    ArrayList<AttackTypes> attacks;
-    Type type;
+    ArrayList<AttackType> attacks;
+    PokeType pokeType;
     EvolutionStatus evolutionStatus;
 
-    public Pokecard(String name, Integer hitPoints, Double hieght, AttackTypes attacks, Type type, EvolutionStatus evolutionStatus) {
+    public Pokecard(String name, Integer hitPoints, Double hieght, AttackType attacks, PokeType pokeType, EvolutionStatus evolutionStatus) {
 
         this.name = name;
         this.hitPoints = hitPoints;
         this.height = hieght;
-        this.type = type;
+        this.pokeType = pokeType;
         this.evolutionStatus = evolutionStatus;
     }
 
-    public Pokecard(Pokecards card) {
-        this.name = card.getName();
-        this.hitPoints = card.getHitpoints();
-        this.attacks = card.getAttackTypes();
-        this.height = card.getHeight();
-        this.type = card.getType();
-        this.evolutionStatus = card.getEvolutionStatus();
+    public Pokecard(PokemonDefinition pokemonDefinition) {
+        this.name = pokemonDefinition.getName();
+        this.hitPoints = pokemonDefinition.getHitpoints();
+        this.attacks = pokemonDefinition.getAttackTypes();
+        this.height = pokemonDefinition.getHeight();
+        this.pokeType = pokemonDefinition.getPokeType();
+        this.evolutionStatus = pokemonDefinition.getEvolutionStatus();
     }
 
     public String getName() {
@@ -59,20 +59,20 @@ public class Pokecard {
         this.height = height;
     }
 
-    public ArrayList<AttackTypes> getAttacks() {
+    public ArrayList<AttackType> getAttacks() {
         return attacks;
     }
 
-    public void setAttacks(ArrayList<AttackTypes> attacks) {
+    public void setAttacks(ArrayList<AttackType> attacks) {
         this.attacks = attacks;
     }
 
-    public Type getType() {
-        return type;
+    public PokeType getPokeType() {
+        return pokeType;
     }
 
-    public void setType(Type type) {
-        this.type = type;
+    public void setPokeType(PokeType pokeType) {
+        this.pokeType = pokeType;
     }
 
     public EvolutionStatus getEvolutionStatus() {

@@ -1,4 +1,4 @@
-import enums.Pokecards;
+import enums.PokemonDefinition;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -40,11 +40,11 @@ public class BattleTests {
     }
 
     private Pokecard createCard1(){
-        return new Pokecard(Pokecards.DREAM_MORNING);
+        return new Pokecard(PokemonDefinition.DREAM_MORNING);
     }
 
     private Pokecard createCard2() {
-        return new Pokecard(Pokecards.MOLTEN);
+        return new Pokecard(PokemonDefinition.MOLTEN);
     }
 }
 

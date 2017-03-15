@@ -1,11 +1,11 @@
 import enums.EvolutionStatus;
-import enums.Type;
+import enums.PokeType;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static enums.Pokecards.MOLTEN;
+import static enums.PokemonDefinition.MOLTEN;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -21,7 +21,7 @@ public class CreatePokemonTest {
         assertThat( pokecards.get(0).getName(), equalTo("Molten"));
         assertThat( pokecards.get(0).getHitPoints(), equalTo(50));
         assertThat( pokecards.get(0).getHeight(), equalTo(0.7));
-        assertThat( pokecards.get(0).getType(), equalTo(Type.LAVA));
+        assertThat( pokecards.get(0).getPokeType(), equalTo(PokeType.LAVA));
         assertThat( pokecards.get(0).evolutionStatus, equalTo(EvolutionStatus.BASIC));
         assertThat( pokecards.get(0).getAttacks().get(0).getName(), equalTo("Tackle"));
         assertThat( pokecards.get(0).getAttacks().get(1).getDamage(), equalTo(80));
