@@ -1,14 +1,17 @@
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class BeforeClassWithStaticTest {
 
+    @Ignore
     @Test
     public void testOne() {
         System.out.println("Normal BeforeClassWithStaticTest method #1.");
     }
 
+    @Ignore
     @Test
     public void testTwo() {
         System.out.println("Normal BeforeClassWithStaticTest method #2.");

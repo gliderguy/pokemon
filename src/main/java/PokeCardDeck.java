@@ -27,6 +27,7 @@ public class PokeCardDeck {
             System.out.println("Pokemon Name: " + pokecard.getName());
             System.out.println(" Hit Points: " + pokecard.getHitPoints());
             System.out.println(" Height: " + pokecard.getHeight());
+            System.out.println(" Weight: " + pokecard.getWeight());
             for ( AttackType attack :pokecard.getAttacks()) {
                 System.out.println(" Attack List " + attack.getName() + " " + attack.getDamage());
             }

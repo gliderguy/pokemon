@@ -1,7 +1,8 @@
-import enums.PokemonDefinition;
 import org.junit.Before;
 import org.junit.Test;
 
+import static enums.PokemonDefinition.DREAM_MORNING;
+import static enums.PokemonDefinition.MOLTAN;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
@@ -39,12 +40,19 @@ public class BattleTests {
         assertThat(attackResult.fighterBHitPoints, is(-30));
     }
 
+    @Test
+    public void battleUsingCardDeck(){
+        PokecardDeckFactory pdf = new PokecardDeckFactory();
+        PokeCardDeck deck = pdf.createCards();
+       // battle.attack(battle.fighterA.)
+    }
+
     private Pokecard createCard1(){
-        return new Pokecard(PokemonDefinition.DREAM_MORNING);
+        return new Pokecard(DREAM_MORNING);
     }
 
     private Pokecard createCard2() {
-        return new Pokecard(PokemonDefinition.MOLTAN);
+        return new Pokecard(MOLTAN);
     }
 }
 

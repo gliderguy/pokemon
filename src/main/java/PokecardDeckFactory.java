@@ -2,7 +2,6 @@ import enums.PokemonDefinition;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.PrimitiveIterator;
 
 /**
  * Created by Test on 3/15/2017.
@@ -18,8 +17,7 @@ public class PokecardDeckFactory {
         this.pokecards = pokecards;
     }
 
-    public PokeCardDeck createCards(Class<PrimitiveIterator> pokemonDefinition){
-
+    public PokeCardDeck createCards(){
         for (PokemonDefinition cardData: PokemonDefinition.values())
         {
             pokecards.add( new Pokecard(cardData));

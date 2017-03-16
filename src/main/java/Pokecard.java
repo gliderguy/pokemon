@@ -5,32 +5,22 @@ import enums.PokemonDefinition;
 
 import java.util.ArrayList;
 
-/**
- * Created by Darren on 12/03/2017.
- */
 public class Pokecard {
 
     String name;
     Integer hitPoints;
     Double height;
+    Double weight;
     ArrayList<AttackType> attacks;
     PokeType pokeType;
     EvolutionStatus evolutionStatus;
-
-    public Pokecard(String name, Integer hitPoints, Double hieght, AttackType attacks, PokeType pokeType, EvolutionStatus evolutionStatus) {
-
-        this.name = name;
-        this.hitPoints = hitPoints;
-        this.height = hieght;
-        this.pokeType = pokeType;
-        this.evolutionStatus = evolutionStatus;
-    }
 
     public Pokecard(PokemonDefinition pokemonDefinition) {
         this.name = pokemonDefinition.getName();
         this.hitPoints = pokemonDefinition.getHitpoints();
         this.attacks = pokemonDefinition.getAttackTypes();
         this.height = pokemonDefinition.getHeight();
+        this.weight = pokemonDefinition.getWeight();
         this.pokeType = pokemonDefinition.getPokeType();
         this.evolutionStatus = pokemonDefinition.getEvolutionStatus();
     }
@@ -84,4 +74,11 @@ public class Pokecard {
     }
 
 
+    public Double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(Double weight) {
+        this.weight = weight;
+    }
 }

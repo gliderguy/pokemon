@@ -57,4 +57,12 @@ public enum PokemonDefinition {
     public EvolutionStatus getEvolutionStatus() {
         return evolutionStatus;
     }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public Integer getCardNumber() {
+        return cardNumber;
+    }
 }

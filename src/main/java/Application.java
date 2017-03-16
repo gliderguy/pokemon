@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.PrimitiveIterator;
 
 import static enums.PokemonDefinition.DREAM_MORNING;
 import static enums.PokemonDefinition.MOLTAN;
@@ -12,7 +11,7 @@ public class Application {
         pokecards.add( new Pokecard(DREAM_MORNING));
 
         PokecardDeckFactory pdf = new PokecardDeckFactory();
-        PokeCardDeck deck = pdf.createCards(PrimitiveIterator.class);
+        PokeCardDeck deck = pdf.createCards();
         deck.displayCards();
     }
 }
