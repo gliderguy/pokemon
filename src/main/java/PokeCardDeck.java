@@ -36,4 +36,14 @@ public class PokeCardDeck {
         }
     }
 
+    public void deal(Integer cardNumber, CardHand handA, CardHand handB){
+
+        for(int i = 1; i <= n; i++) {
+            sum += i;
+        }
+        for (i: 1 to cardNumber){
+
+        }
+    }
+
 }

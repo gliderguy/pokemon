@@ -9,6 +9,7 @@ public class Pokecard {
 
     String name;
     Integer hitPoints;
+    Integer hitPointsCurrent;
     Double height;
     Double weight;
     ArrayList<AttackType> attacks;
@@ -80,5 +81,13 @@ public class Pokecard {
 
     public void setWeight(Double weight) {
         this.weight = weight;
+    }
+
+    public Integer getHitPointsCurrent() {
+        return hitPointsCurrent;
+    }
+
+    public void setHitPointsCurrent(Integer hitPointsCurrent) {
+        this.hitPointsCurrent = hitPointsCurrent;
     }
 }

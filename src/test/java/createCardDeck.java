@@ -9,6 +9,7 @@ public class createCardDeck {
     PokecardDeckFactory  pdf;
     PokeCardDeck deck;
 
+
     @Before
     public void setup(){
         pdf = new PokecardDeckFactory();
@@ -32,8 +33,7 @@ public class createCardDeck {
 
     @Test
     public void dealCards(){
-
+        deck.deal(deck, playerA, playerB);
     }
-
 }
 
