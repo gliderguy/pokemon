@@ -32,8 +32,30 @@ public class createCardDeck {
     }
 
     @Test
-    public void dealCards(){
-        deck.deal(deck, playerA, playerB);
+    public void deal0Cards(){
+        CardHand playerA = new CardHand();
+        CardHand playerB = new CardHand();
+        deck.deal(0, playerA, playerB);
+        assertThat(playerA.hand.size(), is(0));
+        assertThat(playerB.hand.size(), is(0));
+    }
+
+    @Test
+    public void deal1Cards(){
+        CardHand playerA = new CardHand();
+        CardHand playerB = new CardHand();
+        deck.deal(1, playerA, playerB);
+        assertThat(playerA.hand.size(), is(1));
+        assertThat(playerB.hand.size(), is(1));
+    }
+
+    @Test
+    public void deal4Cards(){
+        CardHand playerA = new CardHand();
+        CardHand playerB = new CardHand();
+        deck.deal(4, playerA, playerB);
+        assertThat(playerA.hand.size(), is(4));
+        assertThat(playerB.hand.size(), is(4));
     }
 }
 

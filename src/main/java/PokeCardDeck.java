@@ -2,6 +2,7 @@ import enums.AttackType;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class PokeCardDeck {
     List<Pokecard> pokecards =  new ArrayList<Pokecard>(){};
@@ -38,12 +39,19 @@ public class PokeCardDeck {
 
     public void deal(Integer cardNumber, CardHand handA, CardHand handB){
 
-        for(int i = 1; i <= n; i++) {
-            sum += i;
-        }
-        for (i: 1 to cardNumber){
+        if (cardNumber > 0) {
+            int n;
+            Random rand = new Random();
 
+            for (int i = 1; i <= cardNumber; i++) {
+                n = rand.nextInt(cardNumber);
+                System.out.println(n);
+                //Todo create random number. max number is the number of cards in the pack
+                handA.addCard(pokecards.get(n));
+                n = rand.nextInt(cardNumber);
+                System.out.println(n);
+                handB.addCard(pokecards.get(n));
+            }
         }
     }
-
 }
