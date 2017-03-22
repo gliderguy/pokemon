@@ -8,7 +8,7 @@ import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.hamcrest.core.IsNull.notNullValue;
 
-public class BattleTests {
+public class BattleTest {
 
     Battle battle;
 //    static boolean setupRun;

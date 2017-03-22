@@ -38,20 +38,16 @@ public class PokeCardDeck {
     }
 
     public void deal(Integer cardNumber, CardHand handA, CardHand handB){
-
         if (cardNumber > 0) {
-            int n;
-            Random rand = new Random();
-
-            for (int i = 1; i <= cardNumber; i++) {
-                n = rand.nextInt(cardNumber);
-                System.out.println(n);
-                //Todo create random number. max number is the number of cards in the pack
-                handA.addCard(pokecards.get(n));
-                n = rand.nextInt(cardNumber);
-                System.out.println(n);
-                handB.addCard(pokecards.get(n));
+            for (int i = 1; i <=  cardNumber; i++) {
+                handA.addCard(pokecards.get(getRandomNumber(pokecards.size())));
+                handB.addCard(pokecards.get(getRandomNumber(pokecards.size())));
             }
         }
+    }
+
+    private Integer getRandomNumber(Integer maxNum){
+        Random rand = new Random();
+        return rand.nextInt(maxNum);
     }
 }

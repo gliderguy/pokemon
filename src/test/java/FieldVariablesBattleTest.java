@@ -8,7 +8,7 @@ import java.util.List;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
-public class FieldVariablesBattleTests implements InstanceTestClassListener {
+public class FieldVariablesBattleTest implements InstanceTestClassListener {
 
     static Battle battle;
 
