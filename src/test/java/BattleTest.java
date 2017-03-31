@@ -10,16 +10,24 @@ import static org.hamcrest.core.IsNull.notNullValue;
 
 public class BattleTest {
 
-    Battle battle;
-//    static boolean setupRun;
+    static Battle battle;
+    static boolean setupRun = false;
+    static PokeCardDeck deck;
+    static CardHand playerA;
+    static CardHand playerB;
+    PokecardDeckFactory  pdf;
 
     @Before
     public void setup() {
-//        if (!setupRun) {
-//            System.out.println("****Before Setup Run");
+        if (!setupRun) {
+            System.out.println("****Before Setup Run");
             battle = new Battle(createCard1(), createCard2());
-//            setupRun = true;
-//        }
+            pdf = new PokecardDeckFactory();
+            deck = pdf.createCards();
+
+            createCardDeck();
+            setupRun = true;
+        }
     }
 
     @Test
@@ -29,7 +37,7 @@ public class BattleTest {
 
     @Test
     public void getCardNamesOfFighterAAndFirghterB(){
-        assertThat( battle.getFighterA().getName(), equalTo("Dream Morning"));
+        assertThat( battle.getFighterA().getName(), equalTo("DreamMorning"));
         assertThat( battle.getFighterB().getName(), equalTo("Moltan"));
     }
 
@@ -44,7 +52,13 @@ public class BattleTest {
     public void battleUsingCardDeck(){
         PokecardDeckFactory pdf = new PokecardDeckFactory();
         PokeCardDeck deck = pdf.createCards();
-       // battle.attack(battle.fighterA.)
+       // battle.attack(battle.fighterA.getAttacks().)
+    }
+
+    private void createCardDeck(){
+        playerA = new CardHand();
+        playerB = new CardHand();
+        deck.deal(4, playerA, playerB);
     }
 
     private Pokecard createCard1(){
@@ -55,4 +69,3 @@ public class BattleTest {
         return new Pokecard(MOLTAN);
     }
 }
-

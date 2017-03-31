@@ -2,7 +2,9 @@ package enums;
 
 public enum EvolutionStatus {
     BASIC("Basic"),
-    ADVANCED("Advanced");
+    STAGE2("Stage 2"),
+    ADVANCED("Advanced")
+    ;
 
     private final String evolutionStatus;
 

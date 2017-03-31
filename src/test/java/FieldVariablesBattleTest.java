@@ -25,7 +25,7 @@ public class FieldVariablesBattleTest implements InstanceTestClassListener {
     @Test
     public void createBattle(){
         battle = new Battle(createCard1(), createCard2());
-        assertThat( battle.getFighterA().getName(), equalTo("Dream Morning"));
+        assertThat( battle.getFighterA().getName(), equalTo("DreamMorning"));
     }
 
     @Test

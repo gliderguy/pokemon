@@ -23,7 +23,7 @@ public class createCardDeckTest {
 
     @Test
     public void createPokeDeck( ){
-        assertThat(deck.getCardCount(), is(4));
+        assertThat(deck.getCardCount(), is(5));
     }
 
     @Test
@@ -32,7 +32,7 @@ public class createCardDeckTest {
     }
 
     @Test
-    public void deal0Cards(){
+    public void dealZeroCards(){
         CardHand playerA = new CardHand();
         CardHand playerB = new CardHand();
         deck.deal(0, playerA, playerB);
@@ -41,7 +41,7 @@ public class createCardDeckTest {
     }
 
     @Test
-    public void deal1Cards(){
+    public void dealOneCard(){
         CardHand playerA = new CardHand();
         CardHand playerB = new CardHand();
         deck.deal(1, playerA, playerB);
@@ -50,7 +50,7 @@ public class createCardDeckTest {
     }
 
     @Test
-    public void deal4Cards(){
+    public void dealFourCards(){
         CardHand playerA = new CardHand();
         CardHand playerB = new CardHand();
         deck.deal(4, playerA, playerB);
@@ -58,4 +58,3 @@ public class createCardDeckTest {
         assertThat(playerB.hand.size(), is(4));
     }
 }
-

@@ -5,14 +5,15 @@ import java.util.Arrays;
 
 import static enums.AttackType.*;
 import static enums.EvolutionStatus.BASIC;
-import static enums.PokeType.DREAM;
-import static enums.PokeType.LAVA;
+import static enums.EvolutionStatus.STAGE2;
+import static enums.PokeType.*;
 
 public enum PokemonDefinition {
     MOLTAN(1, "Moltan", 50, 0.7, 1, new ArrayList<AttackType>(Arrays.asList(TACKLE, LAVA_BALL)), LAVA, BASIC),
-    DREAM_MORNING(2, "Dream Morning", 150, 2.0, 1, new ArrayList<AttackType>(Arrays.asList(DREAM_EATER , DREAM_BLAST)), DREAM, BASIC),
+    DREAM_MORNING(2, "DreamMorning", 150, 2.0, 1, new ArrayList<AttackType>(Arrays.asList(DREAM_EATER , DREAM_BLAST)), DREAM, BASIC),
     RINGY(3, "Ringy", 50, 0.7, 2.0, new ArrayList<AttackType>(Arrays.asList(SCRATCH , CUT)), DREAM, BASIC),
-    GEM_EYE(2, "Gem Eye", 50, 0.7, 4.5, new ArrayList<AttackType>(Arrays.asList( BODY_SLAM, GEM_VISION)), DREAM, BASIC);
+    GEM_EYE(2, "Gem Eye", 50, 0.7, 4.5, new ArrayList<AttackType>(Arrays.asList( BODY_SLAM, GEM_VISION)), DREAM, BASIC),
+    MIENSHAO(2, "Mienshao", 90, 4.7, 78.3, new ArrayList<AttackType>(Arrays.asList( AERO_TURN, HIGH_JUMP_KICK)),FIGHTING , STAGE2);
 
     private final Integer cardNumber;
     private final String name;

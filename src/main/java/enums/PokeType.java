@@ -2,7 +2,8 @@ package enums;
 
 public enum PokeType {
         LAVA("Lava"),
-        DREAM("Dream");
+        DREAM("Dream"),
+        FIGHTING("Fighting");
 
         private final String type;
 
